@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #9d7ca2;
+    padding: 10px;
+    text-align: center;
+    height:15%;
+  }
+  
+  /* Style the topnav */
+  ul.topnav {
+    height:5%;
+    display: flex;
+      justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0e2963;
+  }
+  
+  /* Style links in topnav */
+  ul.topnav li a {
+    display: block;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  ul.topnav li a:hover {
+    background-color: #dddddd;
+    color: black;
+  }
+
+#title{
+    color: rgb(68, 11, 121);
+    font-size:30px;
+    font-family:'Courier New', Courier, monospace
+}
+#sub-title{
+    color: rgb(68, 11, 121);
+    font-size:15px;
+    font-family:'Courier New', Courier, monospace
+}
+.menu-bar-headings{
+    font-size:15px;
+    font-family:'Courier New', Courier, monospace
+}
+.background-container{
+    padding:10px;
+    display:flex;
+    flex-direction: row;
+    background: #9d7ca2;
+    height:100vh;
+    width: 100vw;
+    gap: 10px;
+}
+.text-container {
+    padding:30px;
+    height:80%;
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    background-color: #9d7ca2;
+    justify-content: flex-start;
+}
+.image-container {
+    padding:30px;
+    height:80%;
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    background-color: #9d7ca2;
+    background-image: url(/assets/images/looking-glass.png);
+    background-repeat: no-repeat;
+    background-size: 50vh;
+}
+
+#theory-header{
+    color: rgb(68, 11, 121);
+    font-size:20px;
+    font-family:'Courier New', Courier, monospace
+}
+#body-paragraphs{
+    color: rgb(68, 11, 121);
+    font-size:15px;
+    font-family:'Times New Roman', Times, serif
+}
+.theories{
+    height:100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+
+
+

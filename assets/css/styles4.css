@@ -1,0 +1,107 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #9d7ca2;
+    padding: 10px;
+    text-align: center;
+    height:15%;
+  }
+  
+  /* Style the topnav */
+  ul.topnav {
+    height:5%;
+    display: flex;
+      justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0e2963;
+  }
+  
+  /* Style links in topnav */
+  ul.topnav li a {
+    display: block;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  ul.topnav li a:hover {
+    background-color: #dddddd;
+    color: black;
+  }
+
+#title{
+    color: rgb(68, 11, 121);
+    font-size:30px;
+    font-family:'Courier New', Courier, monospace
+}
+#sub-title{
+    color: rgb(68, 11, 121);
+    font-size:15px;
+    font-family:'Courier New', Courier, monospace
+}
+.menu-bar-headings{
+    font-size:15px;
+    font-family:'Courier New', Courier, monospace
+}
+.home-page-container {
+    height:80%;
+    padding:10px;
+    display:flex;
+    flex-direction: row;
+    background-color: #9d7ca2;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes rotate-animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+img{
+    height: 350px;
+    padding: 30px;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    transition:500ms;
+}
+
+  img:hover {
+    animation-name: rotate-animation;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+  }
+  #dragonfly {
+  
+  }
+  
+  #chocolate-beetles {
+    
+  }
+  
+  #bug-chair {
+    
+  }
+  
+  #praying-mantis {
+    
+  }
