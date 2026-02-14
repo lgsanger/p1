@@ -102,4 +102,13 @@ a{
 .continue-reading-heading{
     text-align: center;
 }
+
+.profile-image{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: block;
+}
     
