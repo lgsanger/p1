@@ -6,7 +6,8 @@
   body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #9d7ca2;
   }
   
   header {
@@ -61,6 +62,6 @@
     width: 110vw;
     display:flex;
     flex-direction: row;
-    background-image: url(/assets/images/coraline-home-page.webp);
+    background-image: url(../images/coraline-home-page.webp);
     background-size: cover;
 }

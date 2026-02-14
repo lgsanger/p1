@@ -6,7 +6,8 @@
   body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #9d7ca2;
   }
   
   header {
@@ -56,13 +57,15 @@
     font-family:'Courier New', Courier, monospace
 }
 .home-page-container {
-    height:80%;
-    padding:10px;
+    min-height: calc(100vh - 20%);
+    padding:30px 10px;
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: #9d7ca2;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 @keyframes rotate-animation {
     0%{
@@ -104,4 +107,21 @@ img{
   
   #praying-mantis {
     
+  }
+  
+  .bug-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 45%;
+    max-width: 500px;
+  }
+  
+  .bug-item h3 {
+    color: rgb(68, 11, 121);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
