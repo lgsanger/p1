@@ -82,3 +82,51 @@
     display: block;
     animation: rotate 30s linear infinite;
 }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 24px;
+    }
+    
+    #sub-title {
+        font-size: 13px;
+    }
+    
+    header {
+        padding: 15px 10px;
+    }
+    
+    ul.topnav {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    ul.topnav li a {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .coraline-home-image {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #title {
+        font-size: 20px;
+    }
+    
+    #sub-title {
+        font-size: 12px;
+    }
+    
+    ul.topnav li a {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+    
+    .coraline-home-image {
+        width: 95%;
+    }
+}

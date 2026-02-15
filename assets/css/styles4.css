@@ -132,3 +132,80 @@ img{
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
   }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 24px;
+    }
+    
+    #sub-title {
+        font-size: 13px;
+    }
+    
+    header {
+        padding: 15px 10px;
+    }
+    
+    ul.topnav {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    ul.topnav li a {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .home-page-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 10px;
+    }
+    
+    .bug-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    img {
+        height: 250px;
+        padding: 20px;
+    }
+    
+    .bug-item h3 {
+        font-size: 18px;
+    }
+    
+    .bug-item h3 a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #title {
+        font-size: 20px;
+    }
+    
+    #sub-title {
+        font-size: 12px;
+    }
+    
+    ul.topnav li a {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+    
+    img {
+        height: 200px;
+        padding: 15px;
+    }
+    
+    .bug-item h3 {
+        font-size: 16px;
+    }
+    
+    .bug-item h3 a {
+        font-size: 13px;
+    }
+}
