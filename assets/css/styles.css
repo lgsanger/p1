@@ -144,7 +144,6 @@
 .portal-container {
     position: relative;
     display: inline-block;
-    cursor: pointer;
 }
 
 .coraline-home-image {
@@ -157,29 +156,6 @@
     z-index: 2;
 }
 
-.click-me-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    font-weight: bold;
-    color: #f1f1f1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    z-index: 3;
-    pointer-events: none;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-}
 
 
 /* Mobile Responsiveness */
@@ -209,10 +185,6 @@
     .coraline-home-image {
         width: 80vw;
     }
-    
-    .click-me-text {
-        font-size: 24px;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -231,9 +203,5 @@
     
     .coraline-home-image {
         width: 95vw;
-    }
-    
-    .click-me-text {
-        font-size: 20px;
     }
 }

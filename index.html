@@ -11,7 +11,7 @@
 <body>
 
 <!-- Background Music -->
-<audio id="background-music" loop>
+<audio id="background-music" loop autoplay>
     <source src="assets/audio/soundtrack.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
@@ -19,25 +19,40 @@
 <script>
 // Music playback management
 var audio = document.getElementById('background-music');
+var musicStartAttempted = false;
 
-// Check if user has started music before
-if (localStorage.getItem('musicStarted') === 'true') {
-    // Get saved time and play
-    var savedTime = parseFloat(localStorage.getItem('musicTime') || 0);
-    audio.currentTime = savedTime;
-    audio.play().catch(e => console.log('Autoplay prevented'));
+// Try multiple methods to start audio immediately
+function startMusic() {
+    if (musicStartAttempted) return;
+    musicStartAttempted = true;
+    
+    // Check if returning visitor with saved time
+    if (localStorage.getItem('musicStarted') === 'true') {
+        var savedTime = parseFloat(localStorage.getItem('musicTime') || 0);
+        audio.currentTime = savedTime;
+    }
+    
+    // Attempt to play
+    audio.play().then(function() {
+        localStorage.setItem('musicStarted', 'true');
+    }).catch(function(error) {
+        console.log('Autoplay blocked:', error);
+    });
 }
+
+// Try immediately
+startMusic();
+
+// Try on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', startMusic);
+
+// Try on window load
+window.addEventListener('load', startMusic);
 
 // Save time every second
 audio.addEventListener('timeupdate', function() {
     localStorage.setItem('musicTime', audio.currentTime);
 });
-
-// First-time music start
-function toggleMusic() {
-    localStorage.setItem('musicStarted', 'true');
-    audio.play();
-}
 </script>
 
 <header>
@@ -64,7 +79,7 @@ function toggleMusic() {
 
 <div class="home-page-container">
     <div class="portal-container">
-        <img class="coraline-home-image" src="assets/images/noFilter.webp" alt="image of Coraline crawling through the portal to the Other World" onclick="toggleMusic()">
+        <img class="coraline-home-image" src="assets/images/noFilter.webp" alt="image of Coraline crawling through the portal to the Other World">
     </div>
 </div>
 
