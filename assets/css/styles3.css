@@ -139,7 +139,7 @@ a{
     .background-container {
         flex-direction: column !important;
         height: auto !important;
-        overflow: hidden;
+        min-height: 100vh;
     }
     
     .text-container {
@@ -148,6 +148,12 @@ a{
         padding: 20px !important;
         position: relative;
         z-index: 2;
+    }
+    
+    .theories {
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
     }
     
     .image-container {
