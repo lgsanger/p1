@@ -132,22 +132,27 @@
     
     .background-container {
         flex-direction: column !important;
-        height: auto;
+        height: auto !important;
+        overflow: hidden;
     }
     
     .text-container {
         width: 100% !important;
-        height: auto;
-        padding: 20px;
+        height: auto !important;
+        padding: 20px !important;
+        position: relative;
+        z-index: 2;
     }
     
     .image-container {
         width: 100% !important;
-        height: 300px;
-        min-height: 300px;
-        padding: 20px;
-        background-size: 60%;
-        background-position: center center;
+        height: 300px !important;
+        min-height: 300px !important;
+        padding: 20px !important;
+        background-size: 50% !important;
+        background-position: center center !important;
+        position: relative;
+        z-index: 1;
     }
     
     #theory-header {
