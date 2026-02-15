@@ -58,10 +58,27 @@
     font-family:'Courier New', Courier, monospace
 }
 .home-page-container {
-    height:110%;
-    width: 110vw;
-    display:flex;
-    flex-direction: row;
-    background-image: url(../images/coraline-home-page.webp);
-    background-size: cover;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9d7ca2;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.coraline-home-image {
+    width: 35%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    animation: rotate 30s linear infinite;
 }
