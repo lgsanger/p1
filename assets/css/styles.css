@@ -8,6 +8,70 @@
     padding: 0;
     min-height: 100vh;
     background-color: #9d7ca2;
+    background-image: 
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png),
+        url(../images/button.png);
+    background-repeat: no-repeat;
+    background-size: 
+        35px 35px,
+        40px 40px,
+        30px 30px,
+        38px 38px,
+        42px 42px,
+        32px 32px,
+        36px 36px,
+        34px 34px,
+        39px 39px,
+        37px 37px,
+        33px 33px,
+        41px 41px,
+        35px 35px,
+        38px 38px,
+        40px 40px,
+        36px 36px,
+        34px 34px,
+        39px 39px,
+        37px 37px,
+        35px 35px;
+    background-position: 
+        8% 15%,
+        25% 10%,
+        45% 20%,
+        65% 12%,
+        85% 18%,
+        95% 25%,
+        12% 40%,
+        35% 45%,
+        58% 38%,
+        78% 42%,
+        92% 48%,
+        6% 65%,
+        28% 70%,
+        48% 68%,
+        70% 72%,
+        88% 65%,
+        15% 88%,
+        38% 92%,
+        62% 85%,
+        82% 90%;
   }
   
   header {
@@ -63,7 +127,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #9d7ca2;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes rotate {
@@ -81,6 +147,8 @@
     height: auto;
     display: block;
     animation: rotate 30s linear infinite;
+    position: relative;
+    z-index: 2;
 }
 
 /* Mobile Responsiveness */
