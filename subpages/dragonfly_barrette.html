@@ -10,6 +10,24 @@
     
 <body>
 
+<!-- Background Music -->
+<audio id="background-music" loop>
+    <source src="../assets/audio/soundtrack.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Resume music from saved position
+var audio = document.getElementById('background-music');
+if (localStorage.getItem('musicStarted') === 'true') {
+    var savedTime = parseFloat(localStorage.getItem('musicTime') || 0);
+    audio.currentTime = savedTime;
+    audio.play().catch(e => console.log('Autoplay prevented'));
+}
+audio.addEventListener('timeupdate', function() {
+    localStorage.setItem('musicTime', audio.currentTime);
+});
+</script>
+
 <header>
   <h1 id="title"><b>Dragonfly Facts</b></h1>
   <h2 id="sub-title">Credit To: Sarah Zielinski, Smithsonian Magazine</h2>

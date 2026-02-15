@@ -141,8 +141,14 @@
     }
 }
 
+.portal-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .coraline-home-image {
-    width: 35%;
+    width: 35vw;
     max-width: 900px;
     height: auto;
     display: block;
@@ -150,6 +156,31 @@
     position: relative;
     z-index: 2;
 }
+
+.click-me-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    pointer-events: none;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
@@ -176,7 +207,11 @@
     }
     
     .coraline-home-image {
-        width: 80%;
+        width: 80vw;
+    }
+    
+    .click-me-text {
+        font-size: 24px;
     }
 }
 
@@ -195,6 +230,10 @@
     }
     
     .coraline-home-image {
-        width: 95%;
+        width: 95vw;
+    }
+    
+    .click-me-text {
+        font-size: 20px;
     }
 }

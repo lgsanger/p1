@@ -10,6 +10,36 @@
     
 <body>
 
+<!-- Background Music -->
+<audio id="background-music" loop>
+    <source src="assets/audio/soundtrack.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+// Music playback management
+var audio = document.getElementById('background-music');
+
+// Check if user has started music before
+if (localStorage.getItem('musicStarted') === 'true') {
+    // Get saved time and play
+    var savedTime = parseFloat(localStorage.getItem('musicTime') || 0);
+    audio.currentTime = savedTime;
+    audio.play().catch(e => console.log('Autoplay prevented'));
+}
+
+// Save time every second
+audio.addEventListener('timeupdate', function() {
+    localStorage.setItem('musicTime', audio.currentTime);
+});
+
+// First-time music start
+function toggleMusic() {
+    localStorage.setItem('musicStarted', 'true');
+    audio.play();
+}
+</script>
+
 <header>
   <h1 id="title"><b>through the little door</b></h1>
   <h2 id="sub-title">Lila's Look Into Coraline's World</h2>
@@ -33,7 +63,9 @@
 </nav>
 
 <div class="home-page-container">
-        <img class="coraline-home-image" src="assets/images/noFilter.webp" alt="image of Coraline crawling through the portal to the Other World">
+    <div class="portal-container">
+        <img class="coraline-home-image" src="assets/images/noFilter.webp" alt="image of Coraline crawling through the portal to the Other World" onclick="toggleMusic()">
+    </div>
 </div>
 
 </body>
