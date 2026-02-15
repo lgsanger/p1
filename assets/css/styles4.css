@@ -81,7 +81,6 @@
 
 img{
     height: 350px;
-    padding: 30px;
     display: inline-block;
     justify-content: space-around;
     align-items: center;
@@ -94,19 +93,19 @@ img{
     animation-iteration-count: infinite;
   }
   #dragonfly {
-  
+    border-radius: 20px !important;
   }
   
   #chocolate-beetles {
-    
+    border-radius: 20px !important;
   }
   
   #bug-chair {
-    
+    border-radius: 20px !important;
   }
   
   #praying-mantis {
-    
+    border-radius: 20px !important;
   }
   
   .bug-item {
@@ -115,6 +114,15 @@ img{
     align-items: center;
     flex-basis: 45%;
     max-width: 500px;
+    padding: 30px;
+  }
+  
+  .bug-item img {
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    object-fit: cover;
+    margin-bottom: 15px;
   }
   
   .bug-item h3 {
