@@ -135,16 +135,19 @@
         height: auto;
     }
     
-    .text-container,
-    .image-container {
+    .text-container {
         width: 100% !important;
         height: auto;
         padding: 20px;
     }
     
     .image-container {
+        width: 100% !important;
+        height: 300px;
         min-height: 300px;
-        background-size: contain;
+        padding: 20px;
+        background-size: 60%;
+        background-position: center center;
     }
     
     #theory-header {
