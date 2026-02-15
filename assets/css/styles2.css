@@ -170,6 +170,15 @@
     text-align: center;
 }
 
+.theories article {
+    background-color: #9d7ca2;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #0e2963;
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     #title {
