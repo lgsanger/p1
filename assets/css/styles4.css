@@ -172,6 +172,10 @@ img{
     border-radius: 20px !important;
   }
   
+  #slug {
+    border-radius: 20px !important;
+  }
+  
   .bug-item {
     display: flex;
     flex-direction: column;
