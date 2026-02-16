@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coraline Crafts - Coraline World</title>
+        <meta name="description" content="Handmade crafts inspired by Coraline">
+        <link rel="stylesheet" href="../assets/css/styles4.css"> 
+    </head>
+    
+<body>
+
+<!-- Background Music -->
+<audio id="background-music" loop autoplay>
+    <source src="../assets/audio/soundtrack.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Resume music from saved position
+var audio = document.getElementById('background-music');
+var savedTime = parseFloat(localStorage.getItem('musicTime') || 0);
+audio.currentTime = savedTime;
+audio.play().catch(e => console.log('Autoplay prevented'));
+localStorage.setItem('musicStarted', 'true');
+
+audio.addEventListener('timeupdate', function() {
+    localStorage.setItem('musicTime', audio.currentTime);
+});
+</script>
+
+<header>
+  <h1 id="title"><b>Coraline Crafts</b></h1>
+  <h2 id="sub-title">Handmade Coraline Creations</h2>
+</header>
+
+<nav aria-label="Main navigation">
+    <ul class="topnav">
+        <li class="menu-bar-headings">
+            <a href="../index.html">Home</a>
+        </li>
+        <li id="pop-theories" class="menu-bar-headings">
+            <a href="pop_theories.html">Popular Theories</a>
+        </li>
+        <li class="menu-bar-headings">
+            <a href="essays.html">My Essays</a>
+        </li>
+        <li class="menu-bar-headings">
+            <a href="bugs.html">Bugs of Coraline</a>
+        </li>
+        <li class="menu-bar-headings">
+            <a href="crafts.html" aria-current="page">Coraline Crafts</a>
+        </li>
+        <li class="menu-bar-headings">
+            <a href="about.html">Contact and About</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="home-page-container">
+    <div class="bug-item">
+        <img src="../assets/images/earrings.jpeg" id="earrings" alt="Coraline-inspired earrings">
+        <div class="craft-text">
+            <h3 id="theory-header">Clay Button Earrings</h3>
+            <p id="body-paragraphs">These are a pair of handmade clay earrings that I made to look like the button eyes from Coraline.</p>
+        </div>
+    </div>
+    <div class="bug-item">
+        <img src="../assets/images/jackie.jpeg" id="jackie" alt="Coraline craft by Jackie">
+        <div class="craft-text">
+            <h3 id="theory-header">Crochet Squid</h3>
+            <p id="body-paragraphs">My angel of a friend Jackie crocheted the squid stuffed animal that Coraline has in her room for me for my birthday in 2025. I almost cried when I opened it but couldn't ruin my birthday makeup.</p>
+        </div>
+    </div>
+    <div class="bug-item">
+        <img src="../assets/images/key.jpeg" id="key" alt="Coraline key craft">
+        <div class="craft-text">
+            <h3 id="theory-header">Clay Key Necklace</h3>
+            <p id="body-paragraphs">I made this clay key necklace to look like the key that Coraline uses to open the door to the Other World.</p>
+        </div>
+    </div>
+    <div class="bug-item">
+        <img src="../assets/images/necklace.jpeg" id="necklace" alt="Coraline-inspired necklace">
+        <div class="craft-text">
+            <h3 id="theory-header">Clay Seeing Stone Necklace</h3>
+            <p id="body-paragraphs">The last of my Coraline Clay jewelry pieces I've made so far is a clay replica of the seeing stone that Coraline uses to find the eyes of the ghost children in the Other World.</p>
+        </div>
+    </div>
+</div>    
+
+</body>
+</html>

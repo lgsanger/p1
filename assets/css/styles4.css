@@ -176,6 +176,22 @@ img{
     border-radius: 20px !important;
   }
   
+  #earrings {
+    border-radius: 20px !important;
+  }
+  
+  #jackie {
+    border-radius: 20px !important;
+  }
+  
+  #key {
+    border-radius: 20px !important;
+  }
+  
+  #necklace {
+    border-radius: 20px !important;
+  }
+  
   .bug-item {
     display: flex;
     flex-direction: column;
@@ -207,6 +223,30 @@ img{
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
+  }
+
+  #theory-header {
+    color: rgb(68, 11, 121);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
+
+  #body-paragraphs {
+    color: rgb(68, 11, 121);
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+  }
+
+  .craft-text {
+    background-color: #9d7ca2;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #0e2963;
+    width: 100%;
   }
 
 /* Mobile Responsiveness */
