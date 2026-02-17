@@ -172,13 +172,45 @@ a{
     text-align: center;
 }
 
+.profile-image-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto 0 auto;
+    display: block;
+}
+
 .profile-image{
     max-width: 400px;
     width: 100%;
     height: auto;
-    margin: 30px auto 0 auto;
     border-radius: 10px;
     display: block;
+}
+
+.button-eye {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.profile-image-container:hover .button-eye {
+    opacity: 1;
+}
+
+.button-left {
+    top: 28%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.button-right {
+    top: 27%;
+    left: 62%;
+    transform: translate(-50%, -50%);
 }
 
 /* Mobile Responsiveness */
@@ -225,8 +257,17 @@ a{
         font-size: 14px;
     }
     
+    .profile-image-container {
+        max-width: 300px;
+    }
+    
     .profile-image {
         max-width: 300px;
+    }
+    
+    .button-eye {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -256,8 +297,17 @@ a{
         font-size: 13px;
     }
     
+    .profile-image-container {
+        max-width: 250px;
+    }
+    
     .profile-image {
         max-width: 250px;
+    }
+    
+    .button-eye {
+        width: 40px;
+        height: 40px;
     }
     
     .continue-reading-heading a {
