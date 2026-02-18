@@ -185,6 +185,66 @@ a{
     text-align: center;
 }
 
+/* Home Button */
+.home-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #0e2963;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background-color: rgb(68, 11, 121);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.home-icon {
+    color: #f1f1f1;
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #0e2963;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: rgb(68, 11, 121);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.back-icon {
+    color: #f1f1f1;
+    font-size: 32px;
+    line-height: 1;
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     #title {
@@ -274,5 +334,27 @@ a{
     .text-container,
     .image-container {
         padding: 15px;
+    }
+    
+    .home-button {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .home-icon {
+        font-size: 26px;
+    }
+    
+    .back-button {
+        width: 50px;
+        height: 50px;
+        bottom: 80px;
+        right: 20px;
+    }
+    
+    .back-icon {
+        font-size: 26px;
     }
 }
