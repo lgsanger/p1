@@ -157,23 +157,23 @@ img{
     animation-iteration-count: infinite;
   }
   #dragonfly {
-    border-radius: 20px !important;
+    border-radius: 50% !important;
   }
   
   #chocolate-beetles {
-    border-radius: 20px !important;
+    border-radius: 50% !important;
   }
   
   #bug-chair {
-    border-radius: 20px !important;
+    border-radius: 50% !important;
   }
   
   #praying-mantis {
-    border-radius: 20px !important;
+    border-radius: 50% !important;
   }
   
   #slug {
-    border-radius: 20px !important;
+    border-radius: 50% !important;
   }
   
   #earrings {
@@ -202,11 +202,39 @@ img{
   }
   
   .bug-item img {
-    border-radius: 20px !important;
-    -webkit-border-radius: 20px !important;
-    -moz-border-radius: 20px !important;
+    width: 300px;
+    height: 300px;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bug-item a {
+    display: block;
+  }
+  
+  .bug-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Remove animation from craft images */
+  #earrings,
+  #jackie,
+  #key,
+  #necklace {
+    transition: none !important;
+  }
+  
+  #earrings:hover,
+  #jackie:hover,
+  #key:hover,
+  #necklace:hover {
+    transform: none !important;
+    box-shadow: none !important;
   }
   
   .bug-item h3 {
@@ -257,6 +285,9 @@ img{
     width: 60px;
     height: 60px;
     background-color: #0e2963;
+    background-image: url(../images/button.png);
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -268,15 +299,12 @@ img{
 }
 
 .home-button:hover {
-    background-color: rgb(68, 11, 121);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .home-icon {
-    color: #f1f1f1;
-    font-size: 32px;
-    line-height: 1;
+    display: none;
 }
 
 /* Mobile Responsiveness */
@@ -314,17 +342,9 @@ img{
         max-width: 100%;
     }
     
-    img {
+    .bug-item img {
+        width: 250px;
         height: 250px;
-        padding: 20px;
-    }
-    
-    .bug-item h3 {
-        font-size: 18px;
-    }
-    
-    .bug-item h3 a {
-        font-size: 14px;
     }
     
     .home-button {
@@ -353,16 +373,8 @@ img{
         font-size: 11px;
     }
     
-    img {
+    .bug-item img {
+        width: 200px;
         height: 200px;
-        padding: 15px;
-    }
-    
-    .bug-item h3 {
-        font-size: 16px;
-    }
-    
-    .bug-item h3 a {
-        font-size: 13px;
     }
 }

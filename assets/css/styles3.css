@@ -193,6 +193,9 @@ a{
     width: 60px;
     height: 60px;
     background-color: #0e2963;
+    background-image: url(../images/button.png);
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -204,15 +207,12 @@ a{
 }
 
 .home-button:hover {
-    background-color: rgb(68, 11, 121);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .home-icon {
-    color: #f1f1f1;
-    font-size: 32px;
-    line-height: 1;
+    display: none;
 }
 
 /* Back Button */
